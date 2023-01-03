@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=Fira+Sans:ital,wght@0,300;1,200&display=swap');
+
+/*body e config geral*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #545e75, #a7cced, #304d6d );
+    background-size: 500% 500%;
+    animation: colors 15s ease infinite;
+    overflow-y: hidden;
+}
+
+@keyframes colors{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+/*Fim body e config G.*/
+
+/*Conteudo*/
+section{
+    display: flex;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+.personagem{
+    width:40%;
+    height: 65%;
+    min-width: 560px;
+    min-height: 55vh;
+    margin-top: 160px;
+    margin-left: 280px;
+}
+
+.texto{
+    width: 45%;
+    min-width: 330px;
+    height: 17%;
+    min-height: 120px;
+    margin-top: 270px;
+}
+
+.texto h1{
+    font-size: 80px;
+    margin-left: 20px;
+    color: whitesmoke; 
+    margin-top:-27px;   
+}
+
+.texto h1::after{
+    content: '.' ;
+    opacity: 1;
+    font-size: 75px;
+    margin-left:15px;
+    animation: trave .55s ease infinite;
+    color: #1d3557;
+}
+
+@keyframes trave{
+    
+   0%{
+    opacity: 1;
+   }
+   50%{
+    opacity: 0;
+   }
+   100%{
+    opacity: 1;
+   }
+}
+
+.texto h2{
+    font-size: 40px;
+    margin-left: 20px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.texto h3{
+    font-size: 30px;
+    margin-left: 320px; 
+    color: #1d3557;
+    text-decoration-line: underline;
+    margin-top:-10px;  
+}
+
+
+/*Fim de conteudo*/
+
+ /*Menu Lateral INICIO*/
+
+.navegacao{
+    position: fixed;
+    display: block;
+    height: 100vh;
+    background-color: #1d3557;
+    width:70px;
+    border-left: 10px solid #679436;
+    border-right: 10px solid  #1d3557;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.navegacao:hover{
+    width:300px;
+}
+.navegacao ul{
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 40px;
+}
+.navegacao ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.navegacao ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+}
+
+.navegacao ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.navegacao ul li  a .icon ion-icon{
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;    
+}
+
+.navegacao ul li a .title{
+    position: relative;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navegacao ul li.active{
+    background: #679436;
+}
+ /*Menu Lateral FIM*/
